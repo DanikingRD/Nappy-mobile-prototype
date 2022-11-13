@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "255338468070",
+    "project_id": "nappy-61690",
+    "storage_bucket": "nappy-61690.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:255338468070:android:155937292527e46a8ea127",
+        "android_client_info": {
+          "package_name": "com.example.nappy_mobile"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "255338468070-h6h6qd14sn3772m0tnqq2pr3h24qk3lj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBJG6kQJut3GMAzc4vGTNC5XcCyR5XEG4U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "255338468070-h6h6qd14sn3772m0tnqq2pr3h24qk3lj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
