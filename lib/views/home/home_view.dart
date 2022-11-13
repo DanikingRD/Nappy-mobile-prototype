@@ -3,6 +3,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:fpdart/fpdart.dart';
 import 'package:nappy_mobile/controllers/home_controller.dart';
 import 'package:nappy_mobile/controllers/user_model_controller.dart';
+import 'package:nappy_mobile/models/badge.dart';
 import 'package:nappy_mobile/models/card.dart';
 import 'package:nappy_mobile/models/user.dart';
 import 'package:nappy_mobile/utils.dart';
@@ -15,6 +16,7 @@ import 'package:nappy_mobile/utilities/constants.dart';
 import 'package:nappy_mobile/views/home/widgets/page_indicator.dart';
 import 'package:nappy_mobile/views/loading_view.dart';
 import 'package:nappy_mobile/views/login_view.dart';
+import 'package:nappy_mobile/widgets/badge.dart';
 import 'package:nappy_mobile/widgets/loading_dialog.dart';
 
 class HomeView extends ConsumerWidget {

@@ -7,6 +7,7 @@ import 'dart:math' as math;
 
 import 'package:nappy_mobile/views/card_presentation/widgets/card_header.dart';
 import 'package:nappy_mobile/views/card_presentation/widgets/card_title_container.dart';
+import 'package:nappy_mobile/widgets/badge.dart';
 
 class CardPresentation extends StatelessWidget {
   final CardModel card;
@@ -59,28 +60,28 @@ class CardPresentation extends StatelessWidget {
               const SizedBox(
                 height: 20,
               ),
-              const Badge(
+              const BadgeButton(
                 icon: Icon(
                   Icons.phone,
                 ),
                 title: '+1 202 555 0101',
                 subtitle: 'mobile',
               ),
-              const Badge(
+              const BadgeButton(
                 icon: Icon(
                   Icons.email,
                 ),
                 title: 'Adrian@creativestudio.com',
                 subtitle: 'email',
               ),
-              const Badge(
+              const BadgeButton(
                 icon: Icon(
                   Icons.location_on,
                 ),
                 title: '221B Barker St., London UK',
                 subtitle: 'location',
               ),
-              const Badge(
+              const BadgeButton(
                 icon: Icon(
                   Icons.location_on,
                 ),
@@ -92,36 +93,6 @@ class CardPresentation extends StatelessWidget {
           ),
         ),
       ),
-    );
-  }
-}
-
-class Badge extends StatelessWidget {
-  final Icon icon;
-  final String title;
-  final String subtitle;
-  const Badge({super.key, required this.icon, required this.title, required this.subtitle});
-
-  @override
-  Widget build(BuildContext context) {
-    return ListTile(
-      contentPadding: EdgeInsets.zero, // override default
-      iconColor: Colors.white,
-      leading: FloatingActionButton(
-        heroTag: Text(title),
-        onPressed: () {},
-        backgroundColor: kPrimaryColor,
-        focusElevation: 0.0,
-        highlightElevation: 0.0,
-        child: icon,
-      ),
-      title: Text(
-        title,
-        style: const TextStyle(
-          fontWeight: FontWeight.bold,
-        ),
-      ),
-      subtitle: Text(subtitle),
     );
   }
 }

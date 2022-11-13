@@ -5,6 +5,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:fpdart/fpdart.dart';
 import 'package:nappy_mobile/controllers/image_upload_controller.dart';
 import 'package:nappy_mobile/controllers/user_model_controller.dart';
+import 'package:nappy_mobile/models/badge_list_tile.dart';
 import 'package:nappy_mobile/models/card.dart';
 import 'package:nappy_mobile/models/card_editor.dart';
 import 'package:nappy_mobile/models/user.dart';
@@ -39,6 +40,7 @@ class CardEditorController extends StateNotifier<CardEditor> {
               CardEditorField("Company Name"),
             ],
             activeColor: kPrimaryColor,
+            badgeModels: [BadgeListTileModel(title: "Email", subtitle: "Subtitle", icon: Icons.dangerous)],
           ),
         );
 
@@ -57,12 +59,12 @@ class CardEditorController extends StateNotifier<CardEditor> {
 
   void removeBackground(BuildContext context) {
     state = CardEditor(
-      cardTitleField: state.cardTitleField,
-      fields: state.fields,
-      avatarImage: state.avatarImage,
-      backgroundImage: null,
-      activeColor: state.activeColor,
-    );
+        cardTitleField: state.cardTitleField,
+        fields: state.fields,
+        avatarImage: state.avatarImage,
+        backgroundImage: null,
+        activeColor: state.activeColor,
+        badgeModels: state.badgeModels);
     Navigator.pop(context);
     showSnackBar(context, "Image removed!");
   }
@@ -90,6 +92,7 @@ class CardEditorController extends StateNotifier<CardEditor> {
       avatarImage: null,
       backgroundImage: state.backgroundImage,
       activeColor: state.activeColor,
+      badgeModels: state.badgeModels,
     );
     Navigator.pop(context);
     showSnackBar(context, "Image removed!");

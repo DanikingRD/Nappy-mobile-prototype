@@ -19,36 +19,39 @@ class ThemeColorPicker extends StatelessWidget {
   }
 
   Widget getPicker(BuildContext context) {
-    return BlockPicker(
-      pickerColor: kPrimaryColor,
-      availableColors: const [
-        kPrimaryColor,
-        Colors.red,
-        Colors.deepPurple,
-        Colors.indigo,
-        Colors.blue,
-        Colors.lightBlue,
-        Colors.cyan,
-        Colors.teal,
-        Colors.lightGreen,
-        Colors.lime,
-        Colors.yellow,
-        Colors.amber,
-        Colors.orange,
-        Colors.deepOrange,
-        Colors.brown,
-        Colors.grey,
-        Colors.black,
-      ],
-      layoutBuilder: _layoutBuilder,
-      itemBuilder: (color, isCurrentColor, changeColor) {
-        return _ThemeColorPickerItem(
-          color: color,
-          isCurrentColor: isCurrentColor,
-          changeColor: changeColor,
-        );
-      },
-      onColorChanged: (color) => onChanged(color),
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 16),
+      child: BlockPicker(
+        pickerColor: kPrimaryColor,
+        availableColors: const [
+          kPrimaryColor,
+          Colors.red,
+          Colors.deepPurple,
+          Colors.indigo,
+          Colors.blue,
+          Colors.lightBlue,
+          Colors.cyan,
+          Colors.teal,
+          Colors.lightGreen,
+          Colors.lime,
+          Colors.yellow,
+          Colors.amber,
+          Colors.orange,
+          Colors.deepOrange,
+          Colors.brown,
+          Colors.grey,
+          Colors.black,
+        ],
+        layoutBuilder: _layoutBuilder,
+        itemBuilder: (color, isCurrentColor, changeColor) {
+          return _ThemeColorPickerItem(
+            color: color,
+            isCurrentColor: isCurrentColor,
+            changeColor: changeColor,
+          );
+        },
+        onColorChanged: (color) => onChanged(color),
+      ),
     );
   }
 
@@ -82,7 +85,7 @@ class _ThemeColorPickerItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: const EdgeInsets.all(9),
+      margin: const EdgeInsets.symmetric(horizontal: 10),
       width: 32,
       height: 32,
       decoration: BoxDecoration(
